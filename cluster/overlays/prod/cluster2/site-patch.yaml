@@ -1,0 +1,10 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: gto-siteb-rootsync
+  namespace: config-management-system
+spec:
+  helm:
+      values: 
+        someCluster2Key: someCluster2Value
+        environment: prod

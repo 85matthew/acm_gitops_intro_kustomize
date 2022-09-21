@@ -1,0 +1,10 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: gto-sitea-rootsync
+  namespace: config-management-system
+spec:
+  helm:
+      values: 
+        someCluster1Key: someCluster1Value
+        environment: staging

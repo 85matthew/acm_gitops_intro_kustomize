@@ -1,0 +1,19 @@
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: gto-siteb-rootsync
+  namespace: config-management-system
+spec:
+  sourceFormat: unstructured
+  sourceType: helm
+  helm:
+    #repo is the helm repository URL
+    repo: https://usw1.packages.broadcom.com/artifactory/gto-shared-helm-charts
+    #chart is the helm chart name
+    chart: gto-SITEB-ops-chart
+    version: "1.1"
+    namespace: gto-ops
+    values: 
+      siteBkey: siteBValue
+    auth: gcpserviceaccount
+    gcpServiceAccountEmail: gto-admin@gto-project.iam.gserviceaccount.com

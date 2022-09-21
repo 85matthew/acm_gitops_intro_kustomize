@@ -1,0 +1,6 @@
+bases:
+- ../../base
+namePrefix: prod-
+
+resources:
+cluster1.yaml

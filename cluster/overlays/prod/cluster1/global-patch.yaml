@@ -1,0 +1,14 @@
+# - op: replace
+#   path: /spec/source/path
+#   value: clusters/overlays/us-east-2-1/configs/consolelinks/
+
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: gto-global-rootsync
+  namespace: config-management-system
+spec:
+  helm:
+      values: 
+        clustername: custom-cluster1
+        environment: prod

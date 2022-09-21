@@ -1,0 +1,14 @@
+bases:
+- ../../../../site/siteB/base
+
+namePrefix: prod-
+
+patchesStrategicMerge:
+- global-patch.yaml
+- site-patch.yaml
+
+# - target:
+#     version: configsync.gke.io/v1beta1
+#     kind: RootSync
+#     name: config-management-system
+#   path: cluster1-patch.yaml
